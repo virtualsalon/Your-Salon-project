@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="qrImage" src="..." alt="" />
+    <button onclick="generateQr()">Generate Qr</button>
+
+    <script>
+      async function generateQr() {
+        var response = await fetch("http://localhost:3000/payment-qr-link");
+        var data = await response.json();
+        document.getElementById("qrImage").src = data.qrLink;
+        console.log(data);
+        console.log("helloworld");
+      }
+    </script>
+  </body>
+</html>

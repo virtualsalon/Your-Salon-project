@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: gray;
+}
+
+.back-button a:hover {
+  color: black;
+}
+
+.details-container {
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.details-heading {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.details-heading i {
+  font-size: 36px;
+  margin: 0px 10px 10px 0px;
+}
+
+.address-textarea textarea {
+  width: 100%;
+  min-height: 10vw !important;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+}
+
+.address-button1,
+.address-button2 {
+  width: 100%;
+  border-radius: 30px;
+  padding: 5px 5px;
+  /* margin-bottom: 20px; */
+}
+
+.estimated-time {
+  margin: 20px 0px 20px 10px;
+  /* border: 2px solid black; */
+}
+
+.payment-method {
+  margin: 0px 0px 20px 0px;
+  /* position: relative; */
+}
+
+.radio-cash,
+.radio-online {
+  margin: 10px 0px 10px 0px;
+}
+
+.payment-mode {
+  margin: 40px 0px 20px 0px;
+  display: none;
+}
+
+.services-container,
+.products-container {
+  padding: 20px;
+  margin: 0px 0px 20px 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-container1,
+.service-container2 {
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.service-container1 {
+  font-weight: bold;
+}
+
+.service-container2 {
+  color: gray;
+}
+
+.services-container hr,
+.products-container hr {
+  margin: 10px 0;
+}
+
+.services-heading,
+.products-heading {
+  margin-bottom: 20px;
+}
+
+.services-heading h2,
+.products-heading h2 {
+  margin: 0;
+}
+
+.services-list p,
+.products-list p {
+  margin: 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.service-bottom {
+  bottom: 0;
+  border-bottom: 0.2em solid black;
+  width: calc(50% - 1rem);
+  margin-left: 1rem;
+  transition: all 0.4s;
+}
+.services-list p:last-child,
+.products-list p:last-child {
+  border-bottom: none;
+}
+
+.pay-button {
+  width: 95%;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 5px 0;
+}
+
+.pay-button:hover {
+  background: black;
+  color: white;
+}
+
+.app-icons {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 575px) {
+  .address-button1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    padding: 15px;
+  }
+  .services-container,
+  .products-container {
+    margin-left: 0;
+  }
+  .pay-button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .services-container {
+    margin-top: 20px;
+  }
+}

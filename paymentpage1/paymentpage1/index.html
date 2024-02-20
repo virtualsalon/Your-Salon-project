@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styling.css" />
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
+    defer
+  ></script>
+    <script src="script.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+    <title>Payment Page</title>
+  </head>
+  <body>
+    <div class="row main-row g-0">
+      <div class="col-lg-6 main-col1 details-container">
+        <div class="back-button">
+          <a href="#"
+            ><i class="material-icons">arrow_back</i>
+            BACK
+          </a>
+        </div>
+        <div class="details-heading">
+          <i class="material-icons">person</i>
+          <h4>Details</h4>
+        </div>
+        <div class="row details-row position-relative">
+          <div class="row details-row position-relative my-3">
+            <div
+              id="serv1"
+              class="col-6 details-col1 service-container1"
+              onclick="homeService(this)"
+            >
+              <span>Home Service</span>
+            </div>
+            <span class="service-bottom position-absolute"></span>
+            <div
+              id="serv2"
+              class="col-6 details-col2 service-container2"
+              onclick="selfService(this)"
+            >
+              <span> Self Service </span>
+            </div>
+          </div>
+          <div class="form-floating address-textarea">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea"
+            ></textarea>
+            <label for="floatingTextarea">Address:</label>
+          </div>
+          <!-- <p><h4>Sample address for selected salon will be shown here</h4></p> -->
+          <div class="row address-btn-div">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-dark address-button1">
+                CHANGE ADDRESS
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-dark address-button2">
+                USE THIS ADDRESS
+              </button>
+            </div>
+          </div>
+          <div class="estimated-time">
+            <h5>Estimated Time : <span>02:30:00</span></h5>
+          </div>
+          
+          <div class="row payment-method">
+            <h5>Payment Method:</h5>
+            <div class="offset-1 col-lg-5 radio-cash">
+              <input type="radio" name="payment-method" id="cash" />
+              <label for="">CASH</label>
+            </div>
+            <div class="offset-1 col-lg-5 radio-online">
+              <input type="radio" name="payment-method" id="online" />
+              <label for="">ONLINE</label>
+            </div>
+          </div>
+          <div class="payment-mode">
+            <h5>Payment Mode :</h5>
+            <input
+              type="radio"
+              class="radio-upi"
+              name="payment-mode"
+              id="upi"
+              onselect="showQR()"
+            />
+            <label for="">UPI</label>
+            <br />
+            <input
+              type="radio"
+              class="radio-card"
+              name="payment-mode"
+              id="credit"
+            />
+            <label for="">CREDIT\DEBIT CARD</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 main-col2">
+        <div class="services-container">
+          <div class="total-amount">
+            <h5>TOTAL AMOUNT</h5>
+          </div>
+          <div class="services-heading">
+            <h3>Services</h3>
+          </div>
+          <div class="services-list">
+            <div style="display: flex; justify-content: space-between">
+              <p>Service 1</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Service 2</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Service 3</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Service 4</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Service 5</p>
+              <p>₹0.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="products-container">
+          <div class="products-heading">
+            <h3>Products</h3>
+          </div>
+          <div class="products-list">
+            <div style="display: flex; justify-content: space-between">
+              <p>Product 1</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Product 2</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Product 3</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Product 4</p>
+              <p>₹0.00</p>
+            </div>
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Product 5</p>
+              <p>₹0.00</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn pay-button btn-outline-dark">Proceed To Pay</button>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
