@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 200;
+    box-sizing: border-box;
+}
+
+.Carousel slide {
+    max-width: 100%;
+    max-height: fit-content;
+    margin: auto;
+}
+
+#btn1{
+   float: inline-end;
+}
+
+#carousel{
+    position: relative;
+    transition: all .2s;
+}
+
+#corousel img{
+    height: 90%;
+}
+.homePage::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: black;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+}
+.homePage:hover::after{
+    opacity: 0;
+}
+
+#btnn:hover{
+    background-color: chartreuse;
+}
+
+#caption1{
+    margin-bottom: 160px;
+    margin-left: 550px;
+    /* background-color: black;
+    color: white;
+    opacity: 0.6; */
+}
+
+.navbar-nav{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.btn-outline-dark{
+    margin-left: 15px;
+    width: 10%;
+    height: 5%;
+}
+
+#navbar1{
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.nav-item:hover{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #eb008b;
+  font-family: 'Gotham-Book', sans-serif;
+  padding: 0;
+  cursor: pointer;
+}
+
+#text{
+    justify-content:flex-start;
+
+}
+
+.card{
+    border: none;
+    background-color: black;
+    color: white;
+}
+#card{
+    background-color: black;
+    /* padding: 30px 0px; */
+}
+
+#card2{
+    background-color: white;
+}
+
+.card{
+    transition: all .5s;
+}
+.card:hover{
+    transform: scale(.8);
+}
+
+#Grab{
+    margin-bottom: 50px;
+}
+
+#images1{
+        width: 100%;
+        height: 50vh;
+    }
+h3{
+    color:red;
+    margin-top: 50px;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+#SEASONAL{
+    width: 50%;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+    padding: 50px;
+}
+
+#footer{
+    color: whitesmoke;
+    background-color: black;
+}
+
+#copyright{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    color: black;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    z-index: 99999;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  #explore:hover{
+    text-decoration: underline;
+  }
+
+  .becomePartner{
+    /* background: url();     */
+    border: 5px solid black;
+  }
+  
+  .beocme{
+    color: rgb(243, 66, 66);
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+
+
+  @media screen and (min-width: 400px) {
+    .mobile-nav-icon{
+      display: none;
+    }
+  }
+
+  
+
+
+
+.navbar {
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  /* overflow: hidden; */
+
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 1024px;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 9999999999999;
+}
+
+.dropdown-content .header {
+  background: black;
+  padding: 16px;
+  color: white;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 1rem;
+  background-color: #ccc;
+  height: 250px;
+
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+  #btn1, #btn2{
+    /* display: none !important; */
+    width: 100px;
+  }
+  #SEASONAL{
+    width: 90%;
+  }
+  .container{
+    width: 95%;
+  }
+  .dropdown-content{
+    width: 100%;
+  }
+  .carousel{height: 300px !important;}
+}
+
+.social-media-icons .row>div{
+  flex-wrap: wrap;
+  justify-content:center;
+  display: flex;
+}
+.social-media-icons a{
+  display: block;
+  padding: .3rem 0 ;
+}
+
+
+.active-link{
+  border-bottom: 1px solid white;
+}
+
+
+.navbar-toggler{
+  background: white;
+}

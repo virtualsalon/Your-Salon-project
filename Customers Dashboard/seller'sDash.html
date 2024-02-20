@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <title>Seller's Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            background-color: #111;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .sidebar-option {
+            padding: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar-option:hover {
+            background-color: #343a40;
+            /* Darker color on hover */
+        }
+
+        .content {
+            margin-left: 250px;
+            /*Adjust based on your sidebar width*/
+            padding: 15px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            background-color: slategrey;
+            color: aliceblue;
+        }
+
+        /* Additional styling for card titles */
+        .card-title {
+            color: #343a40;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Salon Services</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="membership.html">Membership</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact us.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="sidebar">
+        <div class="sidebar-option">Dashboard</div>
+        <div class="sidebar-option">Appointment</div>
+        <div class="sidebar-option">Payment</div>
+        <div class="sidebar-option">Packages</div>
+        <div class="sidebar-option">Membership</div>
+        <div class="sidebar-option">Msg/Calls</div>
+        <div class="sidebar-option">Setting</div>
+        <div class="sidebar-option">Logout</div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Total Appointment</h5>
+                            <p class="card-text text-center">04</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Calls out</h5>
+                            <p class="card-text text-center">02</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Cancelled</h5>
+                            <p class="card-text text-center">01</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add your scripts or additional content as needed -->
+</body>
+
+</html>

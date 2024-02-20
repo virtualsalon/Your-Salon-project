@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+  <title>Salon Customer Dashboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      position: sticky;
+      top: 0;
+      z-index: 999999999;
+    }
+
+    #sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      background-color: #111;
+      padding-top: 20px;
+      color: white;
+    }
+
+    .sidebar-option {
+      padding: 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar-option:hover {
+      background-color: #343a40;
+      /* Darker color on hover */
+    }
+
+    #main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    #calendar {
+      margin-top: 20px;
+    }
+
+    .card-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      flex-basis: calc(33.33% - 20px);
+      padding: 20px;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+    }
+
+    #mini-calendar {
+      margin: 20px auto;
+      /* Added to center the mini-calendar */
+      width: 450px;
+      height: 100px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      ;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Salon Services</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="membership.html">Membership</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact us.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div id="sidebar">
+    <a href="seller'sDash.html">
+      <div class="sidebar-option">Seller's Dashboard</div>
+    </a>
+    <a href="/bookAppointment.html">
+      <div class="sidebar-option">Appointment</div>
+    </a>
+    <a href="">
+      <div class="sidebar-option">Payment</div>
+    </a>
+    <a href="">
+      <div class="sidebar-option">Packages</div>
+    </a>
+    <a href="membership.html">
+      <div class="sidebar-option">Membership</div>
+    </a>
+    <a href="seller'sDash.html">
+      <div class="sidebar-option">Msg/Calls</div>
+    </a>
+    <div class="sidebar-option">Setting</div>
+    <div class="sidebar-option">Logout</div>
+  </div>
+
+  <div id="main-content">
+    <div class="card-row">
+      <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card ">
+            <div class="card-body">
+              <h5 class="card-title">Complete Profile</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Membership</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-5">
+          <h3 class="text-center" style="color: red;">Services</h3>
+        </div>
+
+        <!-- services first card -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/services/engin-akyurt-g-m8EDc4X6Q-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Skin treatment</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹500</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/services/yulissa-tagle-AyqNM8D2aEI-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Face Mask</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹300</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/johan-mouchet-KdbCwfzcwWE-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Makeup lashes</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹1500</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- services second card -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/tamara-bellis-2Tv7-O13hgk-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hair color</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹250</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/melanfolia-cWa1_mght10-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Compact styling</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹700</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/rendy-novantino-EUydTGTCrHo-unsplash.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Eyeliner makeup</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹1200</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- serives third card -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Nail Artistry</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹150</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Shaded Nail</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹200</b></small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/images/slides-images/2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hair Care</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary"><b>₹350</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-5">
+          <h3 class="text-center" style="color: red;;">Book your day</h3>
+        </div>
+        <!-- <div id="mini-calendar"></div> -->
+        <input type="date" style="margin: auto;" name="" id="">
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        $('#mini-calendar').fullCalendar({
+          header: {
+            left: 'prev',
+            center: 'title',
+            right: 'next'
+          },
+          height: 'auto', // Adjust the height as needed
+          events: [
+            {
+              title: 'Event 1',
+              start: '2024-02-01'
+            },
+            {
+              title: 'Event 2',
+              start: '2024-02-10'
+            },
+            // Add more events as needed
+          ]
+        });
+      });
+    </script>
+
+    <!-- Add your custom JavaScript code here -->
+
+</body>
+
+
+
+</html>
